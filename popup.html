@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<style>
+  body {
+    width: 290px;
+    margin: 0;
+    padding: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    background: #1c1c1e;
+    color: #f2f2f2;
+  }
+
+  h1 {
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+
+  #status {
+    color: #aaa;
+    font-size: 12px;
+    margin-bottom: 12px;
+    min-height: 16px;
+    word-break: break-word;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .row label {
+    width: 62px;
+    flex-shrink: 0;
+  }
+
+  input[type=range] {
+    flex: 1;
+  }
+
+  select {
+    flex: 1;
+    padding: 5px;
+    background: #2c2c2e;
+    color: #f2f2f2;
+    border: 1px solid #444;
+    border-radius: 6px;
+  }
+
+  button {
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 6px;
+    background: #ff0033;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  button.wide {
+    flex: 1;
+  }
+
+  button:hover {
+    opacity: .9;
+  }
+
+  button:disabled,
+  select:disabled,
+  input:disabled {
+    opacity: .4;
+    cursor: default;
+  }
+
+  small {
+    display: block;
+    color: #888;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* FoxAuraAI Credit Footer */
+  .credit {
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: 1px solid #38383a;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: .4px;
+  }
+
+  .credit a {
+    color: #888;
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+
+  .credit a:hover {
+    color: #ff0033;
+  }
+
+  .credit a span {
+    color: #ff0033;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <h1>YouTube All Around</h1>
+  <div id="status">Loading...</div>
+
+  <div class="row">
+    <label for="volume">Volume</label>
+    <input id="volume" type="range" min="0" max="100" step="1" disabled>
+    <button id="mute" disabled>Mute</button>
+  </div>
+  <div class="row">
+    <label for="quality">Quality</label>
+    <select id="quality" disabled></select>
+  </div>
+  <div class="row">
+    <label for="speed">Speed</label>
+    <select id="speed" disabled></select>
+  </div>
+  <div class="row">
+    <label>Captions</label>
+    <button id="captions" class="wide" disabled>Toggle captions</button>
+  </div>
+
+  <small>Start Picture-in-Picture with the button that appears on the video, then use these controls from any tab.</small>
+
+  <div class="credit">
+   <a href="https://foxauraai.com/" target="_blank">
+    Crafted with <span>♥</span> by foxauraai.com
+   </a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
